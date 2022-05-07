@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!--Font Awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--IconsCout icons-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--Tab icon-->
+    <link rel="shortcut icon" href="assets/farmicon.ico" type="image/x-icon">
+    <!--Page scroll Css-->
+    <link rel="stylesheet" href="scroll/scroll-bar.css">
+    <!--Main CSS-->
+    <link rel="stylesheet" href="css/app.css">
+    <title>FarmBox RV</title>
+</head>
+
+<body>
+    <!------------- header - Titulo + logo -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-container-links">
+                <h1 data-rv-date><span><i class="fa-solid fa-clipboard-list"></i></span> Relatório de visita técnica</h1>
+                <a href="#"><img src="assets/logo-fb.png" alt="fb-image"></a>
+            </div>
+        </div>
+    </header>
+    <!--Open main content-->
+    <main class="main ">
+        <!--EmptyState Event-->
+        <div loadingEmptyState style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img src="assets/FarmB-emptyState.png" class="fade-out-image" alt="" style="width: 50%;">
+            <div class="lds-hourglass" ></div>
+        </div>        
+        <!--Open wrapper(sidebar, farm and plantations)-->
+        <section class="wrapper">
+            <!--Open sidebar contents-->
+            <aside class="sidebar">
+                
+                <div class="sidebar-container">
+                    <div class="sidebar-container-links-top">
+                        <h2>Fazenda</h2>
+                        <h3 farm-name></h3>
+                        <span data-qntd-talhoes></span>
+                        <iframe src="https://maps.google.com/maps?q=checkplant&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="width: 200px;"></iframe>
+                        <div class="divisor"></div>
+                    </div>
+                    <div class="sidebar-container-links-meio">
+                        <div class="first-side-bar">
+                            <div class="first-sidebar-content">
+                                <h2>data da visita</h2>
+                                <h3 data-visita></h3>
+                            </div>
+            
+                            <div class="first-sidebar-content">
+                                <h2>Safra</h2>
+                                <h3 data-safra></h3>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="second-sidebar">
+                                <div class="second-sidebar-container">
+                                    <h2>Realizada por</h2>
+                                    <h4 data-owner-name></h4>
+                                </div>
+                                <div class="second-sidebar-container">
+                                    <p data-owner-initials></p>
+                                </div>
+                            </div>
+                            
+                            <div class="third-sidebar">
+                                <div class="third-sidebar-container">
+                                    <h2>Pluviometria</h2>
+                                        <h4 data-nivel-Pl> <!--<i class="fa-solid fa-droplet"></i>--> </h4> 
+                                    <span>Acumulado na safra</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divisor"></div>
+                    <div class="sidebar-bottom-container">
+                        <div class="sidebar-bottom-container-links">
+                            <h2 class="side-bottom-title">Observações</h2>
+                            <p class="side-bottom-subtitle">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="divisor"></div>
+                    <div class="pdf"><button class="btn btn-printer"><i class="fa-solid fa-print"></i>imprimir</button></div>
+                </div>
+            </aside>
+            <!--Close sidebar contents-->
+            <!--Open cards section-->
+            <section class="section-cards">
+                <!--Farm cards-->
+                <div class="section-cards-container" data-farm-cards>
+                    
+                </div>
+                <!--talhao navcards-->
+                <div class="section-cards-container section-navcard" data-farm-talhao>
+                  
+                </div>
+                <!--plantations cards-->
+                <div class="section-cards-container" data-plantation-cards-div>
+                    
+                </div>
+            </section>
+            <!--Close cards section-->
+        </section>
+        <!--Close wrapper(sidebar, farm and plantations)-->
+        <!--scripts)-->
+        <script src="js/app.js" type="module"></script>
+        <script>
+            //Page print PDF function
+            document.querySelector(".btn").addEventListener("click", function(){
+                window.print()
+            })
+        </script>
+        <!--scripts)-->
+    </main>
+    <!--Close main content-->
+    <!---------------------Footer-------------------->
+    <footer>&copy;2022 CheckPlant Sistemas SA</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@use '../1-base/variables'
+@use '../1-base/_mobile-medio'
+@use '../1-base/_mobile-pequeno'
+@use '../1-base/_mobile-grande'
+main 
+    display: flex
+    flex: 1
+    background-color: #F5F6FA
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    
+    
+
+.wrapper 
+    padding: 0px 16px
+    left: 143px
+    top: 40px
+    display: flex
+    flex-direction: row
+    box-sizing: border-box
+
+    @include mobile-grande.mobile
+        width: 1050px
+
+
+    @include mobile-medio.mobile
+        width: 704px
+
+    @include mobile-pequeno.mobile
+        width: 100%
+        flex-direction: column
+    
+
+
+
+
+        
+    
+
+    

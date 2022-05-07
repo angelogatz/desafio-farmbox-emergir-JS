@@ -1,0 +1,1 @@
+export const justCors = "https://justcors.com/tl_3adbbae/"

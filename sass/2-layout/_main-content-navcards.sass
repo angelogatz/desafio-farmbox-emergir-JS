@@ -1,0 +1,119 @@
+@use '../1-base/variables'
+@use '../1-base/_mobile-medio'
+@use '../1-base/_mobile-pequeno'
+.section-navcard
+    position: relative
+  
+   
+
+    @include mobile-medio.mobile
+        width: 100%
+
+        
+
+        
+
+    h1
+        margin-top: 10px
+        margin-bottom: -30px
+        margin-left: 0
+        
+    &-links
+        background-color: variables.$white-color
+        display: flex
+        border-radius: 8px
+        width: 791px
+        height: 88px
+        margin: 0px 0 16px
+        justify-content: space-between
+        box-shadow: 1px 1px 2px 1px #d4d4d499
+
+        @include mobile-pequeno.mobile
+            width: 100%
+
+
+        .divisor-navcard-mobile
+            display: none
+            background-color: #e0e0e0
+            height: 88px
+            width: 1px
+            margin: 0 20px 0 120px
+
+        @include mobile-medio.mobile
+            width: 432px
+            .divisor-navcard-mobile
+                display: block
+
+        @include mobile-pequeno.mobile
+            width: 100%
+            .divisor-navcard-mobile
+                margin: 0 20px 0 75px
+            
+
+
+        .navcard-link-1
+
+            h3
+                margin-bottom: 0
+                margin-top: 0
+
+            .plantado
+                 color: variables.$plantado-color
+                 border: 1px solid variables.$plantado-color
+                 font-size: 12px
+                 font-weight: bold
+                 width: 65px
+                 height: 18px
+                 justify-content: center
+                 text-align: center
+                 align-items: center
+                 border-radius: 8px 
+                 margin-top: 0
+
+        .navcard-link-2
+            display: flex
+            flex-direction: row 
+            @include mobile-medio.mobile
+                display: none
+                
+            
+            align-items: center
+            margin-left: 200px
+
+            .info-link-card
+                display: flex
+                flex-direction: row
+
+                .info-1
+                    margin-right: 40px
+
+        .navcard-link-3
+            display: flex
+            justify-content: center
+            align-items: center
+
+            i
+                font-size: 40px
+                color: variables.$baloom-text-color
+                margin-left: -90px
+
+        .divisor-navcard
+            background-color: #e0e0e0
+            height: 88px
+            width: 1px
+            margin: 0 20px 0 20px
+
+        .navcard-link-1
+            padding: 10px
+
+            .side-baloom
+                font-size: 12px
+                text-transform: none
+                border: 1px solid 
+                font-weight: 400
+                color: variables.$baloom-text-color
+                border-color: #e0e0e0
+                border-radius: 13%
+                font-family: 'Roboto', sans-serif
+
+                
