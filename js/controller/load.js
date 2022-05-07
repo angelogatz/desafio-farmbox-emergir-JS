@@ -22,7 +22,7 @@ export function load(){
                 console.log("Erro ->" + err)
             } finally {
                 document.querySelector("[loadingEmptyState]").style = "display: none;"
-                document.querySelector(".lds-hourglass").style = "display: none;"
+                document.querySelector(".lds-facebook").style = "display: none;"
                 document.querySelector(".wrapper").style = ""
             }
         }
